@@ -116,7 +116,7 @@ solve_path(N,CurrentBoard, TargetBoard, Visited, [CurrentBoard | RestOfPath]) :-
 start(N,TargetBoard, Board, Path)
 length(Path, _) - чтобы не уйти в глубину
 */	
-start(N,TargetBoard, Board, Path):- solvable(N,Board), solve_path(N, Board, TargetBoard, [Board], Path), length(Path, _).
+start(N,TargetBoard, Board, Path):- solvable(N,Board), length(Path, _), solve_path(N, Board, TargetBoard, [Board], Path).
 
 
 
